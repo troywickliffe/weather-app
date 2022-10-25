@@ -11,7 +11,8 @@ body {
 }
 
 .card {
-    background: #fbfefbd0;
+    background: #0b090ad0;
+    color: white;
     padding: 2em;
     border-radius: 30px;
     width: 100%;
@@ -55,4 +56,15 @@ button:hover {
 
 h1.temp {
     margin: 0;
+    margin-bottom: .4em;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 7px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
 }
