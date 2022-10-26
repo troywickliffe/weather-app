@@ -23,6 +23,7 @@ let weather = {
         document.querySelector(".humidity").textContent = "Humidity: " + humidity + "%";
         document.querySelector(".wind").textContent = "Wind Speed: " + speed + " mph";
         document.querySelector(".weather").classList.remove("loading");
+        document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + name + "')"
     },
     search: function () {
         this.fetchWeather(document.querySelector(".search-bar").value);
