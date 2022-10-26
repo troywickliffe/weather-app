@@ -15,13 +15,14 @@ let weather = {
         const { icon, description } = data.weather[0];
         const { temp, humidity } = data.main;
         const { speed } = data.wind;
-        console.log(name, icon, description, temp, humidity, speed);
+
         document.querySelector(".city").textContent = "Weather in " + name;
         document.querySelector(".icon").src = "http://openweathermap.org/img/wn/" + icon + ".png"
         document.querySelector(".temp").textContent = temp + "°F";
         document.querySelector(".description").textContent = description;
         document.querySelector(".humidity").textContent = "Humidity: " + humidity + "%";
         document.querySelector(".wind").textContent = "Wind Speed: " + speed + " mph";
+        document.querySelector(".weather").classList.remove("loading");
     },
     search: function () {
         this.fetchWeather(document.querySelector(".search-bar").value);
@@ -37,3 +38,5 @@ document.querySelector(".search-bar").addEventListener("keydown", function (even
         weather.search();
     }
 })
+
+weather.fetchWeather("Tokyo")
